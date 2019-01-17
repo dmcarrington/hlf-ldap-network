@@ -11,7 +11,7 @@ To stop it, run ``stop.sh``
 To completely remove all incriminating evidence of the network
 on your system, run ``teardown.sh``.
 
-##LDAP
+## LDAP
 Within the CA docker image:
 fabric-ca-client enroll -u http://admin:adminpw@localhost:7054
 
