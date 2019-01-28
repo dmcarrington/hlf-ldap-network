@@ -19,7 +19,7 @@ fi
 # Start the example LDAP server to authenticate against, specifying a default
 # admin password. See https://github.com/osixia/docker-openldap
 ######################################################################
-docker run -p 389:389 -p 689:689 --name my-openldap-container --env LDAP_ORGANISATION="My Company" --env LDAP_DOMAIN="example.org" \
+docker run -p 389:389 -p 689:689 -v /tmp:/tmp --name my-openldap-container --env LDAP_ORGANISATION="My Company" --env LDAP_DOMAIN="example.org" \
 --env LDAP_ADMIN_PASSWORD="adminpw" --detach osixia/openldap:1.2.2
 
 # Start the HLF Docker containers
