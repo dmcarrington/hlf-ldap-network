@@ -43,7 +43,7 @@ version: 1.4.0
 port: 7054
 
 # Enables debug logging (default: false)
-debug: false
+debug: true
 
 # Size limit of an acceptable CRL in bytes (default: 512000)
 crlsizelimit: 512000
@@ -169,6 +169,7 @@ ldap:
    enabled: true
    # The URL of the LDAP server
    url: ldap://cn=admin,dc=example,dc=org:adminpw@localhost:389/dc=example,dc=org
+   userfilter: (cn=%s)
    # TLS configuration for the client connection to the LDAP server
    tls:
       certfiles:
